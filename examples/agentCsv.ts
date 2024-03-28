@@ -32,7 +32,7 @@ async function langChainPipe(openaiApiKey: string, query: string): Promise<strin
     const fewShotPromptTemplate = new FewShotPromptTemplate({
         examples: examples,
         examplePrompt: examplePrompt,
-        prefix: await prefixPrompt.format({ identity: "Vitalik Buterin" }),
+        prefix: await prefixPrompt.format({ identity: "Marvin Tong" }),
         suffix: suffixTemplate,
         inputVariables: ["query"]
     });
