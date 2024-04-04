@@ -5,19 +5,73 @@ import { ChatOpenAI } from "@langchain/openai";
 import { PromptTemplate, FewShotPromptTemplate } from "@langchain/core/prompts";
 import { StringOutputParser } from "@langchain/core/output_parsers";
 
-import * as csv from "csvtojson";
-
-async function readTweetsFromCsv(filepath: string) {
-  const contents = await csv.default().fromFile(filepath);
-
-  return contents;
-}
-
 async function langChainPipe(openaiApiKey: string, query: string): Promise<string> {
-  const examples = await readTweetsFromCsv("res/marvin_tong.csv");
+  const examples = [
+    {
+      "tweet": `Introduce 🤖 Agent Contract 🤖
+            🔨 Create and host AI Agent with
+            @PhalaNetwork
+             like smart contracts, to build a Multi-Agents World.
+            👋 Vision shared together with
+            @david_enim
+
+            @BrianknowsAI
+
+            @AlgoveraAI
+
+            @autonolas
+
+            🧰 Support
+            @Auto_GPT
+
+            @LangChainAI
+
+
+            💡Idea and design made in #ETHDenver2024
+            https://youtu.be/TEAFVKEV2oc`,
+    },
+    {
+      "tweet": `Wow this is wide!
+            A
+            @RiscZero
+             host runtime is added to
+            @PhalaNetwork
+              js runtime 🫡
+            A milestone for TEE+ZKP multi-prover strategy🔥`,
+    },
+    {
+      "tweet": `🚀🔥
+            @binance
+              is throwing down the gauntlet, and it's time for
+            @PhalaNetwork
+              to make some noise!
+
+            YOUR VOTE decides if  they will list $PHA on the futures market! 💥
+
+            Hit up this link, make your mark, and let's blast $PHA (https://binance.com/en/futures/next) 🌌🔥`,
+    },
+    {
+      "tweet": `🐞Find runtime bugs for
+            @PhalaNetwork
+             ?
+            💰Get bounty from $60,500 prize pool !
+            https://code4rena.com/audits/2024-03-phat-contract-runtime`,
+    },
+    {
+      "tweet": `🥊Taking <flights ✈️> to Denver is a crutch for weak people who don’t want to< 🚗 ride > for 36 hours—-
+            because taking flights have risks, and you have to trust the captain 🥱`,
+    },
+    {
+      "tweet": `Highlights from #ETHDenver2024 🚀:
+            - AI transcends the hype, proving its concrete value in the ecosystem.
+            - Unveiling real-world, practical approaches to decentralizing AI services.
+            - Beyond ZKML, numerous projects are innovating with AI Agent solutions. 🛠️
+            - While "AI as a Player" dominates current Web3 applications, expect a wave of groundbreaking innovations on the horizon. 💡`,
+    }
+  ];
   const examplePrompt = new PromptTemplate({
-    inputVariables: ["Content"],
-    template: `Tweet: {Content}`
+    inputVariables: ["tweet"],
+    template: `Tweet: {tweet}`
   });
 
   const prefixTemplate = "You are {identity} and you are proposing some insightful ideas. Here are some examples:";
@@ -37,7 +91,7 @@ async function langChainPipe(openaiApiKey: string, query: string): Promise<strin
     inputVariables: ["query"]
   });
 
-  console.log(await fewShotPromptTemplate.format({ query: query }));
+  await fewShotPromptTemplate.format({ query: query });
 
   const model = new ChatOpenAI({ openAIApiKey: openaiApiKey });
   const outputParser = new StringOutputParser();
@@ -50,6 +104,7 @@ async function langChainPipe(openaiApiKey: string, query: string): Promise<strin
 }
 
 async function GET(req: Request): Promise<Response> {
+  const secret = req.queries?.key ?? '';
   const openaiApiKey = req.secret?.openaiApiKey as string;
   const query = req.queries.chatQuery[0] as string;
 
@@ -58,6 +113,7 @@ async function GET(req: Request): Promise<Response> {
 }
 
 async function POST(req: Request): Promise<Response> {
+  const secret = req.queries?.key ?? '';
   const openaiApiKey = req.secret?.openaiApiKey as string;
   const query = req.queries.chatQuery[0] as string;
 
