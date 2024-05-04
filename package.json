@@ -18,8 +18,8 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@langchain/community": "^0.0.34",
-    "@langchain/openai": "^0.0.15",
+    "@langchain/community": "^0.0.54",
+    "@langchain/openai": "^0.0.28",
     "csvtojson": "^2.0.10"
   }
 }
