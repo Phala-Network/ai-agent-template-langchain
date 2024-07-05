@@ -116,6 +116,16 @@ POST RESULT: {
     'Access-Control-Allow-Origin': '*'
   }
 }
+
+To test in the SideVM playground go to https://phat.phala.network/contracts/view/0xf0a398600f02ea9b47a86c59aed61387e450e2a99cb8b921cd1d46f734e45409
+
+Connect you polkadot.js account and select 'run_js' with the parameters:
+- engine: SidevmQuickJSWithPolyfill
+- js_code: Source code text of dist/index.ts
+- args: {"method":"GET","path":"/ipfs/QmVHbLYhhYA5z6yKpQr4JWr3D54EhbSsh7e7BFAAyrkkMf","queries":{"chatQuery":["Who are you?"]},"secret":{"openaiApiKey":"OPENAI_API_KEY"},"headers":{}}
+Watch video here for to see the visual steps of testing in Sidevm playground: https://www.youtube.com/watch?v=fNqNeLfFFME
+
+Make sure to replace queries and secret with your values compatible with your AI Agent Contract.
 ```
 
 ### Publish Your AI Agent
@@ -125,9 +135,34 @@ npm run publish
 ```
 
 Upon a successful upload, the command should show the URL to access your AI Agent.
-> AI Agent deployed at: https://agents.phala.network/ipfs/QmQu9AmBL13tyGpxgg5ASt96WQ669p63rnJRWiAo9st8ns/0
-> 
-> Make sure to add your secrets to ensure your AI Agent works properly.
+```shell
+> phat-gpt-template@0.0.1 publish-agent
+> phat-fn build --experimentalAsync && tsx scripts/publish.ts
+
+✓ Compiled successfully.
+  72.73 KB  dist/index.js
+
+    $$\     $$\       $$\                 $$\                         $$\       
+    $$ |    $$ |      \__|                $$ |                        $$ |      
+  $$$$$$\   $$$$$$$\  $$\  $$$$$$\   $$$$$$$ |$$\  $$\  $$\  $$$$$$\  $$$$$$$\  
+  \_$$  _|  $$  __$$\ $$ |$$  __$$\ $$  __$$ |$$ | $$ | $$ |$$  __$$\ $$  __$$\ 
+    $$ |    $$ |  $$ |$$ |$$ |  \__|$$ /  $$ |$$ | $$ | $$ |$$$$$$$$ |$$ |  $$ |
+    $$ |$$\ $$ |  $$ |$$ |$$ |      $$ |  $$ |$$ | $$ | $$ |$$   ____|$$ |  $$ |
+    \$$$$  |$$ |  $$ |$$ |$$ |      \$$$$$$$ |\$$$$$\$$$$  |\$$$$$$$\ $$$$$$$  |
+     \____/ \__|  \__|\__|\__|       \_______| \_____\____/  \_______|\_______/ 
+
+ 💎 thirdweb v0.14.12 💎
+
+- Uploading file to IPFS. This may take a while depending on file sizes.
+
+✔ Successfully uploaded file to IPFS.
+✔ Files stored at the following IPFS URI: ipfs://QmayeZxHXwJxABXaNshP6j8uBE6RedkhmEgiaXd1w1Jib3
+✔ Open this link to view your upload: https://bafybeif3y2jpswse2n6s2cikwyjmbak4cxlpm6vrmgobqkgsmmn34l6m4i.ipfs.cf-ipfs.com/
+
+AI Agent Contract deployed at: https://agents.phala.network/ipfs/QmayeZxHXwJxABXaNshP6j8uBE6RedkhmEgiaXd1w1Jib3
+
+Make sure to add your secrets to ensure your AI-Agent works properly.
+```
 
 <details>
 <summary>New to thirdweb?</summary>
