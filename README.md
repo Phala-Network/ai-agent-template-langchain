@@ -14,11 +14,11 @@
     <a href="https://github.com/Phala-Network/ai-agent-template-langchain"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="QmQu9AmBL13tyGpxgg5ASt96WQ669p63rnJRWiAo9st8ns/0?key=c0c0105ba56276cd&chatQuery=When%20did%20humans%20land%20on%20the%20moon">View Demo</a>
+    <a href="https://wapo-testnet.phala.network/ipfs/QmYzBTdQNPewdhD9GdBJ9TdV7LVhrh9YVRiV8aBup7qZGu?key=815cab7189f6110e&chatQuery=Who%20are%20you">View Demo</a>
     ·
     <a href="https://github.com/Phala-Network/ai-agent-template-langchain/issues">Report Bug</a>
     ·
-    <a href="https://discord.gg/DXGGJajW">Discord</a>
+    <a href="https://discord.gg/phala-network">Discord</a>
   </p>
 
   <h3>Architecure Overview</h3>
@@ -71,76 +71,66 @@ npm run test
 
 Expected Test Results
 ```shell
-User: Who are you?
-    Answer:
+INPUT: {"method":"GET","path":"/ipfs/CID","queries":{"chatQuery":["Who are you?"]},"secret":{"openaiApiKey":"OPENAI_API_KEY"},"headers":{}}
 GET RESULT: {
   status: 200,
-  body: '\n' +
-    '    <!DOCTYPE html>\n' +
-    '    <html lang="en">\n' +
-    '        <head>\n' +
-    '            <meta charset="utf-8" />\n' +
-    '            <title>TestUI</title>\n' +
-    '        </head>\n' +
-    '        <body>\n' +
-    '            <div align="center">\n' +
-    '                <p>I am Marvin Tong, a blockchain enthusiast and advocate for decentralized technologies.</p>\n' +
-    '            </div>\n' +
-    '        </body>\n' +
-    '    </html>',
+  body: "I'm Marvin Tong, an advocate for decentralized technologies and AI integration. My focus is on the intersection of blockchain, AI, and secure computing, promoting innovative projects and collaborations within this space. Through insightful ideas and collaborations with various tech leaders and platforms, I aim to build a Multi-Agents World leveraging tools like Phala Network, Auto-GPT, LangChainAI, and others. I share visions and insights, encourage community participation in tech innovations, and actively participate in significant events like ETHDenver. Apart from my tech-centric endeavors, I also engage with various community initiatives and bounty programs to foster a vibrant ecosystem of decentralized and AI-powered solutions.",
   headers: {
-    'Content-Type': 'text/html; charset=UTF-8',
+    'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*'
   }
 }
-
-User: What the latest direction of Phala?
-    Answer:
-POST RESULT: {
+INPUT: {"method":"GET","path":"/ipfs/CID","queries":{"chatQuery":["What the latest direction of Phala?"]},"secret":{"openaiApiKey":"OPENAI_API_KEY"},"headers":{}}
+GET RESULT: {
   status: 200,
-  body: '\n' +
-    '    <!DOCTYPE html>\n' +
-    '    <html lang="en">\n' +
-    '        <head>\n' +
-    '            <meta charset="utf-8" />\n' +
-    '            <title>TestUI</title>\n' +
-    '        </head>\n' +
-    '        <body>\n' +
-    '            <div align="center">\n' +
-    '                <p>The latest direction of Phala includes introducing AI Agent Contracts, hosting AI agents with Phala Network like smart contracts to build a Multi-Agents World. They are also incorporating a host runtime from RiscZero to their js runtime, marking a milestone for TEE+ZKP multi-prover strategy. Additionally, they are actively engaging with other platforms like binance for potential listings and offering bounties for finding runtime bugs. Overall, Phala is focused on pushing the boundaries of decentralized AI services and innovation in the Web3 space.</p>\n' +
-    '            </div>\n' +
-    '        </body>\n' +
-    '    </html>',
+  body: 'Phala Network is continuously innovating in the realms of privacy-preserving cloud computing, leveraging blockchain technology for secure, decentralized, and scalable compute power. Here are some of the latest directions Phala is taking:\n' +
+    '\n' +
+    '### 1. **AI Agent Contracts**:\n' +
+    'Phala is pioneering the concept of AI Agent Contracts, allowing developers to create and host AI agents akin to smart contracts. This initiative aims to build a multi-agent world, enhancing automation and intelligence within the blockchain ecosystem. For more context, these agents can facilitate a myriad of decentralized services, from automated trading bots to intelligent dApps.\n' +
+    '\n' +
+    '### 2. **Integration with TEE and ZKP**:\n' +
+    'Phala is actively enhancing its trust model by integrating Trusted Execution Environments (TEE) with Zero-Knowledge Proofs (ZKP). This dual strategy boosts security, privacy, and scalability, enabling more robust and confidential decentralized applications.\n' +
+    '\n' +
+    '### 3. **Community Engagement and Bounty Programs**:\n' +
+    'The network is engaging its community through bounty programs and bug-hunting initiatives, often with substantial prize pools. This not only helps in maintaining high security standards but also fosters community involvement and a culture of collaboration.\n' +
+    '\n' +
+    '### 4. **Collaborations and Ecosystem Expansion**:\n' +
+    "Phala is partnering with industry leaders and other innovative projects to expand its ecosystem. The integration with Risc Zero's runtime is one such example, which underscores Phala’s commitment to combining different technological advancements for a more secure and efficient blockchain solution.\n" +
+    '\n' +
+    '### 5. **Exchange Listings and Market Presence**:\n' +
+    "Phala Network actively works towards increasing its market presence, as evidenced by efforts to get $PHA listed on major futures markets like Binance. This drives liquidity and broadens access for traders and investors, enhancing the token's utility and adoption.\n" +
+    '\n' +
+    '### 6. **Focus on Real-World AI and Decentralization**:\n' +
+    'Phala is not only creating theoretical AI solutions but is focused on unveiling real-world, practical approaches to decentralizing AI services. The goal is to transcend the hype and showcase the concrete value AI can bring within a decentralized framework.\n' +
+    '\n' +
+    '### 7. **Community Events and Advocacy**:\n' +
+    'Participation in events like ETHDenver is crucial for Phala, as it allows the team to showcase advancements, engage with the community, and gather feedback from stakeholders. These events also help in keeping the community excited and informed about the latest developments.\n' +
+    '\n' +
+    '### 8. **Future Innovations**:\n' +
+    'While current innovations are impressive, Phala isn’t stopping there. The network is poised to introduce groundbreaking solutions in the near future, particularly in AI agent functionalities within Web3 applications. This will push the boundaries of what is possible with decentralized, intelligent agents.\n' +
+    '\n' +
+    'In sum, Phala Network is driving forward with a focus on privacy, security, AI integration, and community engagement, making significant strides toward creating a more secure and intelligent blockchain ecosystem.',
   headers: {
-    'Content-Type': 'text/html; charset=UTF-8',
+    'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*'
   }
 }
+**NOTE**:
+This is a local test and your published code could have a different result when executing in the TEE on Phala Network.
 
-To test in the SideVM playground go to https://phat.phala.network/contracts/view/0xf0a398600f02ea9b47a86c59aed61387e450e2a99cb8b921cd1d46f734e45409
-
-Connect you polkadot.js account and select 'run_js' with the parameters:
-- engine: SidevmQuickJSWithPolyfill
-- js_code: Source code text of dist/index.ts
-- args: {"method":"GET","path":"/ipfs/QmVHbLYhhYA5z6yKpQr4JWr3D54EhbSsh7e7BFAAyrkkMf","queries":{"chatQuery":["Who are you?"]},"secret":{"openaiApiKey":"OPENAI_API_KEY"},"headers":{}}
-Watch video here for to see the visual steps of testing in Sidevm playground: https://www.youtube.com/watch?v=fNqNeLfFFME
-
-Make sure to replace queries and secret with your values compatible with your AI Agent Contract.
+Please reach out to the team here if your run into issues: https://discord.gg/phala-network
 ```
 
 ### Publish Your AI Agent
 Upload your compiled AI Agent code to IPFS.
 ```shell
-npm run publish
+npm run publish-agent
 ```
 
 Upon a successful upload, the command should show the URL to access your AI Agent.
 ```shell
-> phat-gpt-template@0.0.1 publish-agent
-> phat-fn build --experimentalAsync && tsx scripts/publish.ts
-
-✓ Compiled successfully.
-  72.73 KB  dist/index.js
+Running command: npx thirdweb upload dist/index.js
+This may require you to log into thirdweb and will take some time to publish to IPFS...
 
     $$\     $$\       $$\                 $$\                         $$\       
     $$ |    $$ |      \__|                $$ |                        $$ |      
@@ -156,12 +146,15 @@ Upon a successful upload, the command should show the URL to access your AI Agen
 - Uploading file to IPFS. This may take a while depending on file sizes.
 
 ✔ Successfully uploaded file to IPFS.
-✔ Files stored at the following IPFS URI: ipfs://QmayeZxHXwJxABXaNshP6j8uBE6RedkhmEgiaXd1w1Jib3
-✔ Open this link to view your upload: https://bafybeif3y2jpswse2n6s2cikwyjmbak4cxlpm6vrmgobqkgsmmn34l6m4i.ipfs.cf-ipfs.com/
+✔ Files stored at the following IPFS URI: ipfs://QmYzBTdQNPewdhD9GdBJ9TdV7LVhrh9YVRiV8aBup7qZGu
+✔ Open this link to view your upload: https://b805a9b72767504353244e0422c2b5f9.ipfscdn.io/ipfs/bafybeie6giqpm4fmxt4vzdfi6jlbxxlvjlal3cm57auubgcmuvm7xcqtli/
 
-AI Agent Contract deployed at: https://agents.phala.network/ipfs/QmayeZxHXwJxABXaNshP6j8uBE6RedkhmEgiaXd1w1Jib3
+Agent Contract deployed at: https://wapo-testnet.phala.network/ipfs/QmYzBTdQNPewdhD9GdBJ9TdV7LVhrh9YVRiV8aBup7qZGu
 
-Make sure to add your secrets to ensure your AI-Agent works properly.
+If your agent requires secrets, ensure to do the following:
+1) Edit the setSecrets.ts file to add your secrets
+2) Set the variable AGENT_CID=QmYzBTdQNPewdhD9GdBJ9TdV7LVhrh9YVRiV8aBup7qZGu in the .env file
+3) Run command: npm run set-secrets
 ```
 
 <details>
@@ -169,88 +162,84 @@ Make sure to add your secrets to ensure your AI-Agent works properly.
 We use <a href="https://thirdweb.com/dashboard/infrastructure/storage">thirdweb Storage</a> to host IPFS contents. If you are new to thirdweb, the command will guide you to create your account or login to your existing account from the browser. (You may need to forward port 8976 if you are accessing a remote console via SSH.)
 </details>
 
+<details>
+<summary>Did thirdweb fail to publish?</summary>
+If ThirdWeb fails to publish, please use any IPFS pinning service to publish your Agent Contract.
+</details>
+
 ### Access the Published AI Agent
 
-Once published, your AI Agent is available at the URL: `https://agents.phala.network/ipfs/<your-cid>`. You can get it from the "Publish to IPFS" step.
+Once published, your AI Agent is available at the URL: `https://wapo-testnet.phala.network/ipfs/<your-cid>`. You can get it from the "Publish to IPFS" step.
 
 You can test it with `curl`.
 
 ```bash
-curl https://agents.phala.network/ipfs/<your-cid>
+curl https://wapo-testnet.phala.network/ipfs/<your-cid>
 ```
 
 ### Add Secrets
 
 By default, all the compiled JS code is visible for anyone to view if they look at IPFS CID. This makes private info like API keys, signer keys, etc. vulnerable to be stolen. To protect devs from leaking keys, we have added a field called `secret` in the `Request` object. It allows you to store secrets in a vault for your AI Agent to access.
 
-<details>
-<summary><b>How to Add Secrets</b></summary>
-
-The steps to add a `secret` is simple. We will add the [OpenAI](https://platform.openai.com/docs/quickstart?context=node) API Key in this example by creating a secret JSON object with the `openaiApiKey`:
-
-```json
-{"openApiKey": "<OPENAI_API_KEY>"}
+To add your secrets,
+1) edit the [setSecrets.ts](./scripts/setSecrets.ts) file and update the `secrets` variable at the top of the file
+```typescript
+// Update your key value JSON object here for your secrets
+const secrets = JSON.stringify({
+  // Add your secrets here
+  // key: value
+  openaiApiKey: process.env.OPENAI_API_KEY
+})
 ```
-
-Then in your frame code, you will be able to access the secret key via `req.secret` object:
-
-```js
-async function POST(req: Request): Promise<Response> {
-    const apiKey = req.secret?.apiKey
-}
+2) Update the [.env](./.env.example) file with your published agent IPFS CID
+```text
+AGENT_CID=QmYzBTdQNPewdhD9GdBJ9TdV7LVhrh9YVRiV8aBup7qZGu
 ```
-
-> **Note**: Before continuing, make sure to publish your compiled AI Agent JS code, so you can add secrets to the CID.
-
-**Open terminal**
-Use `curl` to `POST` your secrets to `https://agents.phala.network/vaults`. Replace `IPFS_CID` with the CID to the compile JS code in IPFS, and replace `<OPENAI_API_KEY>` with your OpenAI API key.
-
-The command will look like this:
+3) Run command to set the secrets
 ```shell
-curl https://agents.phala.network/vaults -H 'Content-Type: application/json' -d '{"cid": "IPFS_CID", "data": {"apiKey": "<OPENAI_API_KEY>"}}'
-# Output:
-# {"token":"e85ae53d2ba4ca8d","key":"e781ef31210e0362","succeed":true}
+npm run set-secrets
+```
+Expected output:
+```shell
+Storing secrets...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   205    0    68  100   137     92    187 --:--:-- --:--:-- --:--:--   280
+{"token":"6a4edea526c67508","key":"815cab7189f6110e","succeed":true}
+
+Secrets set successfully. Go to the URL below to interact with your agent:
+https://wapo-testnet.phala.network/ipfs/QmYzBTdQNPewdhD9GdBJ9TdV7LVhrh9YVRiV8aBup7qZGu?key=815cab7189f6110e
 ```
 
 The API returns a `token` and a `key`. The `key` is the id of your secret. It can be used to specify which secret you are going to pass to your frame. The `token` can be used by the developer to access the raw secret. You should never leak the `token`.
 
 To verify the secret, run the following command where `key` and `token` are replaced with the values from adding your `secret` to the vault.
 ```shell
-curl https://agents.phala.network/vaults/<key>/<token>
+curl https://wapo-testnet.phala.network/vaults/<key>/<token>
 ```
 
 Expected output:
 ```shell
-{"data":{"apiKey":"<OPENAI_API_KEY>"},"succeed":true}
+{"data":{"openaiApiKey":"<OPENAI_API_KEY>"},"succeed":true}
 ```
-
-If you are using secrets, make sure that your URL is set in the following syntax where `cid` is the IPFS CID of your compiled JS file and `key` is the `key` from adding secrets to your vault.
-```text
-https://agents.phala.network/ipfs/<cid>?key=<key>
-```
-
-Example:
-https://agents.phala.network/ipfs/QmQu9AmBL13tyGpxgg5ASt96WQ669p63rnJRWiAo9st8ns/0?key=c0c0105ba56276cd&chatQuery=When%20did%20humans%20land%20on%20the%20moon
-
-</details>
 
 ### Access Queries
 To help create custom logic, we have an array variable named `queries` that can be accessed in the `Request` class. To access the `queries` array variable `chatQuery` value at index `0`, the syntax will look as follows:
 ```typescript
 const query = req.queries.chatQuery[0] as string;
 ```
-The example at https://agents.phala.network/ipfs/Qma2WjqWqW8wYG2tEQ9YFUgyVrMDA9VzvkkdeFny7Smn3R/0?key=686df81d326fa5f2&chatQuery=When%20did%20humans%20land%20on%20the%20moon will have a value of `When did humans land on the moon`. `queries` can have any field name, so `chatQuery` is just an example of a field name and not a mandatory name, but remember to update your `index.ts` file logic to use your expected field name.
+The example at https://wapo-testnet.phala.network/ipfs/QmYzBTdQNPewdhD9GdBJ9TdV7LVhrh9YVRiV8aBup7qZGu?key=815cab7189f6110e&chatQuery=Who%20are%20you will have a value of `When did humans land on the moon`. `queries` can have any field name, so `chatQuery` is just an example of a field name and not a mandatory name, but remember to update your `index.ts` file logic to use your expected field name.
+
 
 ## FAQ
 
 <details>
-<summary><b>What packages can I use in the ai-agent server?</b></summary>
+<summary><b>What packages can I use in the AI Agent server?</b></summary>
 <ul>
   <li>Most of the npm packages are supported: viem, onchainkit, ….</li>
   <li>Some packages with some advanced features are not supported:</li>
   <ul>
-    <li>Large code size. Compiled bundle should be less than 500kb.</li>
-    <li>Large memory usage, like image generation</li>
+    <li>Memory usage over 100MB</li>
     <li>Web Assembly</li>
     <li>Browser only features: local storage, service workers, etc</li>
   </ul>
@@ -262,13 +251,7 @@ The example at https://agents.phala.network/ipfs/Qma2WjqWqW8wYG2tEQ9YFUgyVrMDA9V
 <ul>
   <li>The code runs inside a tailored <a href="https://bellard.org/quickjs/">QuickJS engine</a></li>
   <li>Available features: ES2023, async, fetch, setTimeout, setInterval, bigint</li>
-  <li>Resource limits</li>
-  <ul>
-    <li>Max execution time ~30s</li>
-    <li>Max memory usage: 16 mb</li>
-    <li>Max code size: 500 kb</li>
-    <li>Limited CPU burst: CPU time between async calls is limited. e.g. Too complex for-loop may hit the burst limit.</li>
-  </ul>
+  <li> <a href="https://docs.phala.network/tech-specs/ai-agent-contract#wapojs/">Tech spec doc</a></li>
 </ul>
 </details>
 
