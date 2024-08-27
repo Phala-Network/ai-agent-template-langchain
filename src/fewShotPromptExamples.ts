@@ -60,4 +60,4 @@ export const fewShotPromptExamples = [
             - Beyond ZKML, numerous projects are innovating with AI Agent solutions. 🛠️
             - While "AI as a Player" dominates current Web3 applications, expect a wave of groundbreaking innovations on the horizon. 💡`,
     }
-];
+]
