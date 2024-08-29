@@ -49,14 +49,9 @@ npm install
 ```
 
 ### Testing Locally
-Create `.env` file and add your OpenAI API Key
+Create `.env` file with the default ThirdWeb API key for publishing your Agent Contract to IPFS
 ```shell
 cp .env.example .env
-```
-
-In `.env` file replace `YOUR_OPENAI_KEY` with your API Key
-```text
-OPENAI_API_KEY="YOUR_OPENAI_KEY"
 ```
 
 Build your Agent
